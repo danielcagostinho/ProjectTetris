@@ -1,0 +1,289 @@
+\documentclass[12pt, titlepage]{article}
+\usepackage{fullpage}
+\usepackage[round]{natbib}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{hyperref}
+
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=blue
+}
+\usepackage[round]{natbib}
+\newcounter{acnum}
+\newcommand{\actheacnum}{AC\theacnum}
+\newcommand{\acref}[1]{AC\ref{#1}}
+\newcounter{ucnum}
+\newcommand{\uctheucnum}{UC\theucnum}
+\newcommand{\uref}[1]{UC\ref{#1}}
+\newcounter{mnum}
+\newcommand{\mthemnum}{M\themnum}
+\newcommand{\mref}[1]{M\ref{#1}}
+\title{SE 3XA3: Design Document\\PROJECT TETRIS}
+\author{Team \#11, Team Tetris
+		\\ Daniel Agostinho agostd
+		\\ Anthony Chang changa7
+		\\ Divya Sridhar sridhad
+}
+\date{\today}
+
+\begin{document}
+\maketitle
+\pagenumbering{roman}
+\tableofcontents
+\listoftables
+\listoffigures
+\begin{table}[bp]
+\caption{\bf Revision History}
+\begin{tabularx}{\textwidth}{p{3cm}p{2cm}p{4cm}X}
+\toprule {\bf Date} & {\bf Version} & {\bf Developer(s)} & {\bf Notes}\\
+\midrule
+11/02/2016 & 0.0 & Anthony Chang & Initial Draft\\
+11/02/2016 & 0.0 &  Daniel Agostinho & Initial Draft\\
+11/02/2016 & 0.0 & Divya Sridhar & Initial Draft\\
+\bottomrule
+\end{tabularx}
+\end{table}
+\newpage
+\pagenumbering{arabic}
+
+\section{Introduction}
+	This is the Module Guide (MG) for PROJECT TETRIS. PROJECT TETRIS is a reimplementation of the classic arcade game Tetris. The user moves pieces called Tetraminos into a game board called a "well" and stacks them. When a row of the well is completely filled, that row is cleared and the user gets points. The purpose of the game is to obtain a high score by clearing as many rows as possible without letting the stack of pieces reach the top. 
+\paragraph{}
+	This project was designed with key programming principles in mind. These principles are: information hiding, modularity, and design for change. We divided the project into modules which are independent sections of code that have their own unique purpose. Modules support good programming principles such as information hiding. The modules abstract their information from other modules such that the other modules need not worry about that information. It does not concern them and allows for the modules to be modified independently and changes can be made without affecting the whole system.
+\paragraph{}
+	The rest of the document is organized as follows. Section
+\ref{SecChange} lists the anticipated and unlikely changes of the software
+requirements. Section \ref{SecMH} summarizes the module decomposition that
+was constructed according to the likely changes. Section \ref{SecConnection}
+specifies the connections between the software requirements and the
+modules. Section \ref{SecMD} gives a detailed description of the
+modules. Section \ref{SecTM} includes two traceability matrices. One checks
+the completeness of the design against the requirements provided in the SRS. The
+other shows the relation between anticipated changes and the modules. Section
+\ref{SecUse} describes the use relation between modules.
+
+
+\section{Anticipated and Unlikely Changes} \label{SecChange}
+This section lists any possible changes to the system. According to the likeliness
+of the change, they are classified into two
+categories: anticipated changes are listed in Section \ref{SecAchange}, and
+unlikely changes are listed in Section \ref{SecUchange}.
+\subsection{Anticipated Changes} \label{SecAchange}
+A design for change paradigm was utilized during our design process for PROJECT TETRIS.
+The following anticipated changes are design choices that are made to elements hidden within 
+modules and thus are easy to alter without affecting other components of the project.
+\begin{description}
+\item[\refstepcounter{acnum} \actheacnum \label{acHardware}:] The specific
+  hardware on which the software is running.
+\item[\refstepcounter{acnum} \actheacnum \label{acOS}:] The specific
+  Operating System on which the software interfaces with.
+\item[\refstepcounter{acnum} \actheacnum \label{acJava}:] The language
+  of Java (future versions/releases).
+\end{description}
+\subsection{Unlikely Changes} \label{SecUchange}
+The following design choices are incorporated in multiple components of the system. If
+a decision should later need to be changed, many different modules will need to be 
+modified. Thus, these design decisions are unlikely to change.
+\begin{description}
+\item[\refstepcounter{ucnum} \uctheucnum \label{ucIO}:] Input/Output devices
+  (Input: Mouse and/or Keyboard, Output: File and/or Screen).
+\item[\refstepcounter{ucnum} \uctheucnum \label{ucAlgorithm}:] The Algorithm
+  for tetromino interaction (setting to well and/or clearing a row).
+\item[\refstepcounter{ucnum} \uctheucnum \label{ucGoal}:] Goal of the software:
+  Playable Tetris game.
+\end{description}
+
+
+\section{Module Hierarchy} \label{SecMH}
+	This section of the documents outlines the design of the modular decomposition. Table 2 shows how the modular hierarchy is decomposed by secrets.
+
+This section provides an overview of the module design. Modules are summarized
+in a hierarchy decomposed by secrets in Table \ref{TblMH}. The modules listed
+below, which are leaves in the hierarchy tree, are the modules that will
+actually be implemented.
+\begin{description}
+\item [\refstepcounter{mnum} \mthemnum \label{mHH}:] Hardware-Hiding Module
+\item [\refstepcounter{mnum} \mthemnum \label{mHH}:] Output Module
+\item [\refstepcounter{mnum} \mthemnum \label{mHH}:] Input Module
+\item [\refstepcounter{mnum} \mthemnum \label{mHH}:] Game Logic Module
+\item [\refstepcounter{mnum} \mthemnum \label{mHH}:] Game Graphics Module
+
+\item ...
+\end{description}
+\begin{table}[h!]
+\centering
+\begin{tabular}{p{0.3\textwidth} p{0.6\textwidth}}
+\toprule
+\textbf{Level 1} & \textbf{Level 2}\\
+\midrule
+{Hardware-Hiding Module} & ~ \\
+\midrule
+\multirow{4}{0.3\textwidth}{Behaviour-Hiding Module} & Output Module\\
+& Input Module\\
+& Game Graphics Module\\
+& Input Control Module\\
+\midrule
+\multirow{1}{0.3\textwidth}{Software Decision Module} &  Game Logic\\
+
+\bottomrule
+\end{tabular}
+\caption{Module Hierarchy}
+\label{TblMH}
+\end{table}
+
+
+\section{Connection Between Requirements and Design} \label{SecConnection}
+	The system is designed such that the requirements specified in the Software Requirements Specification are satisfied. In the Design Document, the system is broken down into modules. The traceability matrix in Table \ref{TblRT} displays the connection between the requirements and the modules. Each requirements has a set of modules that are created to satisfy said requirement.
+
+
+\section{Module Decomposition} \label{SecMD}
+
+	As this system was designed, one of the programming principles that was followed was information hiding. The modules are decomposed as to correctly abstract changes from other modules. This is called information hiding. In module decomposition, the Secrets are the 
+
+Modules are decomposed according to the principle of ``information hiding''
+proposed by \citet{ParnasEtAl1984}. The \emph{Secrets} field in a module
+decomposition is a brief statement of the design decision hidden by the
+module. The \emph{Services} field specifies \emph{what} the module will do
+without documenting \emph{how} to do it. For each module, a suggestion for the
+implementing software is given under the \emph{Implemented By} title. If the
+entry is \emph{OS}, this means that the module is provided by the operating
+system or by standard programming language libraries.  Also indicate if the
+module will be implemented specifically for the software.
+Only the leaf modules in the
+hierarchy have to be implemented. If a dash (\emph{--}) is shown, this means
+that the module is not a leaf and will not have to be implemented. Whether or
+not this module is implemented depends on the programming language
+selected.
+\subsection{Hardware Hiding Modules (\mref{mHH})}
+\begin{description}
+\item[Secrets:]The data structure and algorithm used to implement the virtual
+  hardware.
+\item[Services:]Serves as a virtual hardware used by the rest of the
+  system. This module provides the interface between the hardware and the
+  software so the system can use it to accept inputs and display outputs.
+\item[Implemented By:] OS
+\end{description}
+\subsection{Behaviour-Hiding Module}
+\begin{description}
+\item[Secrets:]The contents of the required behaviours.
+\item[Services:]Includes programs that provide externally visible behaviour of
+  the system as specified in the software requirements specification (SRS)
+  documents. This module serves as a communication layer between the
+  hardware-hiding module and the software decision module. The programs in this
+  module will need to change if there are changes in the SRS.
+\item[Implemented By:] --
+\end{description}
+\subsubsection{Input Format Module (\mref{mInput})}
+\begin{description}
+\item[Secrets:]The format and structure of the input data.
+\item[Services:]Converts the input data into the data structure used by the
+  input parameters module.
+\item[Implemented By:] [Your Program Name Here]
+\end{description}
+\subsubsection{Etc.}
+
+\subsection{Software Decision Module}
+\subsubsection{Exception Handling: File Not Found}
+\begin{description}
+\item[Secrets:] Algorithm used to find required files.
+\item[Services:] Prompt user if the file cannot be found and to utilize a default. 
+\item[Implemented By:] PROJECT TETRIS
+\end{description}
+\subsubsection{Event Listener}
+\begin{description}
+\item[Secrets:] Algorithm for accepting user inputs
+\item[Services:] Listens for events triggered by the user and performs the desired
+action accordingly.
+\item[Implemented By:] PROJECT TETRIS
+\end{description}
+\subsubsection{Graphical User Interface}
+\begin{description}
+\item[Secrets:] Algorithms and rules pertaining to the display
+\item[Services:] Interfaces with the OS to display the game
+  % Changes in these modules are more likely to be motivated by a desire to
+  % improve performance than by externally imposed changes.
+\item[Implemented By:] PROJECT TETRIS
+\end{description}
+
+
+\section{Traceability Matrix} \label{SecTM}
+This section shows two traceability matrices: between the modules and the
+requirements and between the modules and the anticipated changes.
+% the table should use mref, the requirements should be named, use something
+% like fref
+\begin{table}[H]
+\centering
+\begin{tabular}{p{0.2\textwidth} p{0.6\textwidth}}
+\toprule
+\textbf{Req.} & \textbf{Modules}\\
+\midrule
+R1 & \mref{mHH}, \mref{mInput}, \mref{mParams}, \mref{mControl}\\
+R2 & \mref{mInput}, \mref{mParams}\\
+R3 & \mref{mVerify}\\
+R4 & \mref{mOutput}, \mref{mControl}\\
+R5 & \mref{mOutput}, \mref{mODEs}, \mref{mControl}, \mref{mSeqDS}, \mref{mSolver}, \mref{mPlot}\\
+R6 & \mref{mOutput}, \mref{mODEs}, \mref{mControl}, \mref{mSeqDS}, \mref{mSolver}, \mref{mPlot}\\
+R7 & \mref{mOutput}, \mref{mEnergy}, \mref{mControl}, \mref{mSeqDS}, \mref{mPlot}\\
+R8 & \mref{mOutput}, \mref{mEnergy}, \mref{mControl}, \mref{mSeqDS}, \mref{mPlot}\\
+R9 & \mref{mVerifyOut}\\
+R10 & \mref{mOutput}, \mref{mODEs}, \mref{mControl}\\
+R11 & \mref{mOutput}, \mref{mODEs}, \mref{mEnergy}, \mref{mControl}\\
+\bottomrule
+\end{tabular}
+\caption{Trace Between Requirements and Modules}
+\label{TblRT}
+\end{table}
+\begin{table}[H]
+\centering
+\begin{tabular}{p{0.2\textwidth} p{0.6\textwidth}}
+\toprule
+\textbf{AC} & \textbf{Modules}\\
+\midrule
+\acref{acHardware} & \mref{mHH}\\
+\acref{acInput} & \mref{mInput}\\
+\acref{acParams} & \mref{mParams}\\
+\acref{acVerify} & \mref{mVerify}\\
+\acref{acOutput} & \mref{mOutput}\\
+\acref{acVerifyOut} & \mref{mVerifyOut}\\
+\acref{acODEs} & \mref{mODEs}\\
+\acref{acEnergy} & \mref{mEnergy}\\
+\acref{acControl} & \mref{mControl}\\
+\acref{acSeqDS} & \mref{mSeqDS}\\
+\acref{acSolver} & \mref{mSolver}\\
+\acref{acPlot} & \mref{mPlot}\\
+\bottomrule
+\end{tabular}
+\caption{Trace Between Anticipated Changes and Modules}
+\label{TblACT}
+\end{table}
+
+
+\section{Use Hierarchy Between Modules} \label{SecUse}
+In this section, the uses hierarchy between modules is
+provided. \citet{Parnas1978} said of two programs A and B that A {\em uses} B if
+correct execution of B may be necessary for A to complete the task described in
+its specification. That is, A {\em uses} B if there exist situations in which
+the correct functioning of A depends upon the availability of a correct
+implementation of B.  Figure \ref{FigUH} illustrates the use relation between
+the modules. It can be seen that the graph is a directed acyclic graph
+(DAG). Each level of the hierarchy offers a testable and usable subset of the
+system, and modules in the higher level of the hierarchy are essentially simpler
+because they use modules from the lower levels.
+\begin{figure}[H]
+\centering
+%\includegraphics[width=0.7\textwidth]{UsesHierarchy.png}
+\caption{Use hierarchy among modules}
+\label{FigUH}
+\end{figure}
+
+\bibliographystyle{plainnat}
+\bibliography{MG}
+
+\end{document}

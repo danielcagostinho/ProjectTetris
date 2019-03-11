@@ -1,0 +1,230 @@
+\hypertarget{class_project_tetris_1_1_group11_1_1_model_1_1_piece}{}\section{Project\+Tetris.\+Group11.\+Model.\+Piece Class Reference}
+\label{class_project_tetris_1_1_group11_1_1_model_1_1_piece}\index{Project\+Tetris.\+Group11.\+Model.\+Piece@{Project\+Tetris.\+Group11.\+Model.\+Piece}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_project_tetris_1_1_group11_1_1_model_1_1_piece_addee3c9cfed3f3a362cad4e89beaa27c}{Piece} (Point\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} piece\+Coords, int pieceX, int pieceY, Color piece\+Color)
+\begin{DoxyCompactList}\small\item\em Constructor for \hyperlink{class_project_tetris_1_1_group11_1_1_model_1_1_piece}{Piece}. \end{DoxyCompactList}\item 
+\hypertarget{class_project_tetris_1_1_group11_1_1_model_1_1_piece_ac570b95abe339502c9d576673c734748}{}\label{class_project_tetris_1_1_group11_1_1_model_1_1_piece_ac570b95abe339502c9d576673c734748} 
+void \hyperlink{class_project_tetris_1_1_group11_1_1_model_1_1_piece_ac570b95abe339502c9d576673c734748}{piece\+Drop} ()
+\begin{DoxyCompactList}\small\item\em This function drops the piece down 1 line. \end{DoxyCompactList}\item 
+\hypertarget{class_project_tetris_1_1_group11_1_1_model_1_1_piece_a3829a3fe63042cbd4765e59619a9147a}{}\label{class_project_tetris_1_1_group11_1_1_model_1_1_piece_a3829a3fe63042cbd4765e59619a9147a} 
+void \hyperlink{class_project_tetris_1_1_group11_1_1_model_1_1_piece_a3829a3fe63042cbd4765e59619a9147a}{move\+Left} ()
+\begin{DoxyCompactList}\small\item\em This function moves the piece left over 1 line. \end{DoxyCompactList}\item 
+\hypertarget{class_project_tetris_1_1_group11_1_1_model_1_1_piece_ac2d30f3f8e7bb4f156b590ba41a1c24b}{}\label{class_project_tetris_1_1_group11_1_1_model_1_1_piece_ac2d30f3f8e7bb4f156b590ba41a1c24b} 
+void \hyperlink{class_project_tetris_1_1_group11_1_1_model_1_1_piece_ac2d30f3f8e7bb4f156b590ba41a1c24b}{move\+Right} ()
+\begin{DoxyCompactList}\small\item\em This function moves the piece right over 1 line. \end{DoxyCompactList}\item 
+void \hyperlink{class_project_tetris_1_1_group11_1_1_model_1_1_piece_a49a8a87f2d7265970cda241bb0740106}{rotate\+Left} (int newO)
+\begin{DoxyCompactList}\small\item\em This function rotates the piece C\+CW. \end{DoxyCompactList}\item 
+void \hyperlink{class_project_tetris_1_1_group11_1_1_model_1_1_piece_a9ec88cace1726a50873efb97a8ec84fb}{rotate\+Right} (int newO)
+\begin{DoxyCompactList}\small\item\em This function rotates the piece CW. \end{DoxyCompactList}\item 
+Point \mbox{[}$\,$\mbox{]} \hyperlink{class_project_tetris_1_1_group11_1_1_model_1_1_piece_ad8329552a5f8d91046075dca5d8897fd}{get\+Piece\+Coords} (int o)
+\begin{DoxyCompactList}\small\item\em This function returns the coordinates of a piece at the given position. \end{DoxyCompactList}\item 
+void \hyperlink{class_project_tetris_1_1_group11_1_1_model_1_1_piece_aba9188db14387a600e902dadd2d20332}{set\+Piece\+Coords} (Point\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} piece\+Coords)
+\begin{DoxyCompactList}\small\item\em This function sets the coordinates of a piece. \end{DoxyCompactList}\item 
+int \hyperlink{class_project_tetris_1_1_group11_1_1_model_1_1_piece_a018dce64b98650107e8871e23dd1e152}{get\+PieceX} ()
+\begin{DoxyCompactList}\small\item\em This function returns the X coordinate. \end{DoxyCompactList}\item 
+void \hyperlink{class_project_tetris_1_1_group11_1_1_model_1_1_piece_a5ea3a78cfb66a1609cf259f9e624dfcb}{set\+PieceX} (int pieceX)
+\begin{DoxyCompactList}\small\item\em This function sets the X coordinate. \end{DoxyCompactList}\item 
+int \hyperlink{class_project_tetris_1_1_group11_1_1_model_1_1_piece_a4c4c4dacf31d9824f2a223a722833b55}{get\+PieceY} ()
+\begin{DoxyCompactList}\small\item\em This function returns the Y coordinate. \end{DoxyCompactList}\item 
+void \hyperlink{class_project_tetris_1_1_group11_1_1_model_1_1_piece_a95bc4289b926d0dbc31cffee2089d464}{set\+PieceY} (int pieceY)
+\begin{DoxyCompactList}\small\item\em This function sets the Y coordinate. \end{DoxyCompactList}\item 
+int \hyperlink{class_project_tetris_1_1_group11_1_1_model_1_1_piece_aaad692840f784a0a1fd016a64830240e}{get\+Orientation} ()
+\begin{DoxyCompactList}\small\item\em This function returns the orientation of the piece. \end{DoxyCompactList}\item 
+void \hyperlink{class_project_tetris_1_1_group11_1_1_model_1_1_piece_a84cf70c609e13d3a31f7c3815ddff827}{set\+Orientation} (int orientation)
+\begin{DoxyCompactList}\small\item\em This function sets the orientation of a piece. \end{DoxyCompactList}\item 
+Color \hyperlink{class_project_tetris_1_1_group11_1_1_model_1_1_piece_a0e992758414c2d119d0501d6a7d2cd0f}{get\+Color} ()
+\begin{DoxyCompactList}\small\item\em This function returns the color of the piece. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_project_tetris_1_1_group11_1_1_model_1_1_piece_addee3c9cfed3f3a362cad4e89beaa27c}{}\label{class_project_tetris_1_1_group11_1_1_model_1_1_piece_addee3c9cfed3f3a362cad4e89beaa27c} 
+\index{Project\+Tetris\+::\+Group11\+::\+Model\+::\+Piece@{Project\+Tetris\+::\+Group11\+::\+Model\+::\+Piece}!Piece@{Piece}}
+\index{Piece@{Piece}!Project\+Tetris\+::\+Group11\+::\+Model\+::\+Piece@{Project\+Tetris\+::\+Group11\+::\+Model\+::\+Piece}}
+\subsubsection{\texorpdfstring{Piece()}{Piece()}}
+{\footnotesize\ttfamily Project\+Tetris.\+Group11.\+Model.\+Piece.\+Piece (\begin{DoxyParamCaption}\item[{Point}]{piece\+Coords\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]},  }\item[{int}]{pieceX,  }\item[{int}]{pieceY,  }\item[{Color}]{piece\+Color }\end{DoxyParamCaption})}
+
+
+
+Constructor for \hyperlink{class_project_tetris_1_1_group11_1_1_model_1_1_piece}{Piece}. 
+
+Constructor creates and sets the coordinates and color of the pieces. 
+\begin{DoxyParams}{Parameters}
+{\em piece\+Coords} & (x,y) coordinates of the shape of the piece. \\
+\hline
+{\em pieceX} & X coordinates. \\
+\hline
+{\em pieceY} & Y coordinates. \\
+\hline
+{\em piece\+Color} & Color. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_project_tetris_1_1_group11_1_1_model_1_1_piece_a0e992758414c2d119d0501d6a7d2cd0f}{}\label{class_project_tetris_1_1_group11_1_1_model_1_1_piece_a0e992758414c2d119d0501d6a7d2cd0f} 
+\index{Project\+Tetris\+::\+Group11\+::\+Model\+::\+Piece@{Project\+Tetris\+::\+Group11\+::\+Model\+::\+Piece}!get\+Color@{get\+Color}}
+\index{get\+Color@{get\+Color}!Project\+Tetris\+::\+Group11\+::\+Model\+::\+Piece@{Project\+Tetris\+::\+Group11\+::\+Model\+::\+Piece}}
+\subsubsection{\texorpdfstring{get\+Color()}{getColor()}}
+{\footnotesize\ttfamily Color Project\+Tetris.\+Group11.\+Model.\+Piece.\+get\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function returns the color of the piece. 
+
+\begin{DoxyReturn}{Returns}
+piece\+Color 
+\end{DoxyReturn}
+\hypertarget{class_project_tetris_1_1_group11_1_1_model_1_1_piece_aaad692840f784a0a1fd016a64830240e}{}\label{class_project_tetris_1_1_group11_1_1_model_1_1_piece_aaad692840f784a0a1fd016a64830240e} 
+\index{Project\+Tetris\+::\+Group11\+::\+Model\+::\+Piece@{Project\+Tetris\+::\+Group11\+::\+Model\+::\+Piece}!get\+Orientation@{get\+Orientation}}
+\index{get\+Orientation@{get\+Orientation}!Project\+Tetris\+::\+Group11\+::\+Model\+::\+Piece@{Project\+Tetris\+::\+Group11\+::\+Model\+::\+Piece}}
+\subsubsection{\texorpdfstring{get\+Orientation()}{getOrientation()}}
+{\footnotesize\ttfamily int Project\+Tetris.\+Group11.\+Model.\+Piece.\+get\+Orientation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function returns the orientation of the piece. 
+
+\begin{DoxyReturn}{Returns}
+orientation 
+\end{DoxyReturn}
+\hypertarget{class_project_tetris_1_1_group11_1_1_model_1_1_piece_ad8329552a5f8d91046075dca5d8897fd}{}\label{class_project_tetris_1_1_group11_1_1_model_1_1_piece_ad8329552a5f8d91046075dca5d8897fd} 
+\index{Project\+Tetris\+::\+Group11\+::\+Model\+::\+Piece@{Project\+Tetris\+::\+Group11\+::\+Model\+::\+Piece}!get\+Piece\+Coords@{get\+Piece\+Coords}}
+\index{get\+Piece\+Coords@{get\+Piece\+Coords}!Project\+Tetris\+::\+Group11\+::\+Model\+::\+Piece@{Project\+Tetris\+::\+Group11\+::\+Model\+::\+Piece}}
+\subsubsection{\texorpdfstring{get\+Piece\+Coords()}{getPieceCoords()}}
+{\footnotesize\ttfamily Point \mbox{[}$\,$\mbox{]} Project\+Tetris.\+Group11.\+Model.\+Piece.\+get\+Piece\+Coords (\begin{DoxyParamCaption}\item[{int}]{o }\end{DoxyParamCaption})}
+
+
+
+This function returns the coordinates of a piece at the given position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em o} & Position of piece. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+piece\+Coords 
+\end{DoxyReturn}
+\hypertarget{class_project_tetris_1_1_group11_1_1_model_1_1_piece_a018dce64b98650107e8871e23dd1e152}{}\label{class_project_tetris_1_1_group11_1_1_model_1_1_piece_a018dce64b98650107e8871e23dd1e152} 
+\index{Project\+Tetris\+::\+Group11\+::\+Model\+::\+Piece@{Project\+Tetris\+::\+Group11\+::\+Model\+::\+Piece}!get\+PieceX@{get\+PieceX}}
+\index{get\+PieceX@{get\+PieceX}!Project\+Tetris\+::\+Group11\+::\+Model\+::\+Piece@{Project\+Tetris\+::\+Group11\+::\+Model\+::\+Piece}}
+\subsubsection{\texorpdfstring{get\+Piece\+X()}{getPieceX()}}
+{\footnotesize\ttfamily int Project\+Tetris.\+Group11.\+Model.\+Piece.\+get\+PieceX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function returns the X coordinate. 
+
+\begin{DoxyReturn}{Returns}
+pieceX 
+\end{DoxyReturn}
+\hypertarget{class_project_tetris_1_1_group11_1_1_model_1_1_piece_a4c4c4dacf31d9824f2a223a722833b55}{}\label{class_project_tetris_1_1_group11_1_1_model_1_1_piece_a4c4c4dacf31d9824f2a223a722833b55} 
+\index{Project\+Tetris\+::\+Group11\+::\+Model\+::\+Piece@{Project\+Tetris\+::\+Group11\+::\+Model\+::\+Piece}!get\+PieceY@{get\+PieceY}}
+\index{get\+PieceY@{get\+PieceY}!Project\+Tetris\+::\+Group11\+::\+Model\+::\+Piece@{Project\+Tetris\+::\+Group11\+::\+Model\+::\+Piece}}
+\subsubsection{\texorpdfstring{get\+Piece\+Y()}{getPieceY()}}
+{\footnotesize\ttfamily int Project\+Tetris.\+Group11.\+Model.\+Piece.\+get\+PieceY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function returns the Y coordinate. 
+
+\begin{DoxyReturn}{Returns}
+pieceY 
+\end{DoxyReturn}
+\hypertarget{class_project_tetris_1_1_group11_1_1_model_1_1_piece_a49a8a87f2d7265970cda241bb0740106}{}\label{class_project_tetris_1_1_group11_1_1_model_1_1_piece_a49a8a87f2d7265970cda241bb0740106} 
+\index{Project\+Tetris\+::\+Group11\+::\+Model\+::\+Piece@{Project\+Tetris\+::\+Group11\+::\+Model\+::\+Piece}!rotate\+Left@{rotate\+Left}}
+\index{rotate\+Left@{rotate\+Left}!Project\+Tetris\+::\+Group11\+::\+Model\+::\+Piece@{Project\+Tetris\+::\+Group11\+::\+Model\+::\+Piece}}
+\subsubsection{\texorpdfstring{rotate\+Left()}{rotateLeft()}}
+{\footnotesize\ttfamily void Project\+Tetris.\+Group11.\+Model.\+Piece.\+rotate\+Left (\begin{DoxyParamCaption}\item[{int}]{newO }\end{DoxyParamCaption})}
+
+
+
+This function rotates the piece C\+CW. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em newO} & new orientation of the piece. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_project_tetris_1_1_group11_1_1_model_1_1_piece_a9ec88cace1726a50873efb97a8ec84fb}{}\label{class_project_tetris_1_1_group11_1_1_model_1_1_piece_a9ec88cace1726a50873efb97a8ec84fb} 
+\index{Project\+Tetris\+::\+Group11\+::\+Model\+::\+Piece@{Project\+Tetris\+::\+Group11\+::\+Model\+::\+Piece}!rotate\+Right@{rotate\+Right}}
+\index{rotate\+Right@{rotate\+Right}!Project\+Tetris\+::\+Group11\+::\+Model\+::\+Piece@{Project\+Tetris\+::\+Group11\+::\+Model\+::\+Piece}}
+\subsubsection{\texorpdfstring{rotate\+Right()}{rotateRight()}}
+{\footnotesize\ttfamily void Project\+Tetris.\+Group11.\+Model.\+Piece.\+rotate\+Right (\begin{DoxyParamCaption}\item[{int}]{newO }\end{DoxyParamCaption})}
+
+
+
+This function rotates the piece CW. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em newO} & new orientation of the piece. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_project_tetris_1_1_group11_1_1_model_1_1_piece_a84cf70c609e13d3a31f7c3815ddff827}{}\label{class_project_tetris_1_1_group11_1_1_model_1_1_piece_a84cf70c609e13d3a31f7c3815ddff827} 
+\index{Project\+Tetris\+::\+Group11\+::\+Model\+::\+Piece@{Project\+Tetris\+::\+Group11\+::\+Model\+::\+Piece}!set\+Orientation@{set\+Orientation}}
+\index{set\+Orientation@{set\+Orientation}!Project\+Tetris\+::\+Group11\+::\+Model\+::\+Piece@{Project\+Tetris\+::\+Group11\+::\+Model\+::\+Piece}}
+\subsubsection{\texorpdfstring{set\+Orientation()}{setOrientation()}}
+{\footnotesize\ttfamily void Project\+Tetris.\+Group11.\+Model.\+Piece.\+set\+Orientation (\begin{DoxyParamCaption}\item[{int}]{orientation }\end{DoxyParamCaption})}
+
+
+
+This function sets the orientation of a piece. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em orientation} & New orientation for the piece. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_project_tetris_1_1_group11_1_1_model_1_1_piece_aba9188db14387a600e902dadd2d20332}{}\label{class_project_tetris_1_1_group11_1_1_model_1_1_piece_aba9188db14387a600e902dadd2d20332} 
+\index{Project\+Tetris\+::\+Group11\+::\+Model\+::\+Piece@{Project\+Tetris\+::\+Group11\+::\+Model\+::\+Piece}!set\+Piece\+Coords@{set\+Piece\+Coords}}
+\index{set\+Piece\+Coords@{set\+Piece\+Coords}!Project\+Tetris\+::\+Group11\+::\+Model\+::\+Piece@{Project\+Tetris\+::\+Group11\+::\+Model\+::\+Piece}}
+\subsubsection{\texorpdfstring{set\+Piece\+Coords()}{setPieceCoords()}}
+{\footnotesize\ttfamily void Project\+Tetris.\+Group11.\+Model.\+Piece.\+set\+Piece\+Coords (\begin{DoxyParamCaption}\item[{Point}]{piece\+Coords\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+This function sets the coordinates of a piece. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em piece\+Coords} & coordinates of the new position. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_project_tetris_1_1_group11_1_1_model_1_1_piece_a5ea3a78cfb66a1609cf259f9e624dfcb}{}\label{class_project_tetris_1_1_group11_1_1_model_1_1_piece_a5ea3a78cfb66a1609cf259f9e624dfcb} 
+\index{Project\+Tetris\+::\+Group11\+::\+Model\+::\+Piece@{Project\+Tetris\+::\+Group11\+::\+Model\+::\+Piece}!set\+PieceX@{set\+PieceX}}
+\index{set\+PieceX@{set\+PieceX}!Project\+Tetris\+::\+Group11\+::\+Model\+::\+Piece@{Project\+Tetris\+::\+Group11\+::\+Model\+::\+Piece}}
+\subsubsection{\texorpdfstring{set\+Piece\+X()}{setPieceX()}}
+{\footnotesize\ttfamily void Project\+Tetris.\+Group11.\+Model.\+Piece.\+set\+PieceX (\begin{DoxyParamCaption}\item[{int}]{pieceX }\end{DoxyParamCaption})}
+
+
+
+This function sets the X coordinate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pieceX} & new X coordinate. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_project_tetris_1_1_group11_1_1_model_1_1_piece_a95bc4289b926d0dbc31cffee2089d464}{}\label{class_project_tetris_1_1_group11_1_1_model_1_1_piece_a95bc4289b926d0dbc31cffee2089d464} 
+\index{Project\+Tetris\+::\+Group11\+::\+Model\+::\+Piece@{Project\+Tetris\+::\+Group11\+::\+Model\+::\+Piece}!set\+PieceY@{set\+PieceY}}
+\index{set\+PieceY@{set\+PieceY}!Project\+Tetris\+::\+Group11\+::\+Model\+::\+Piece@{Project\+Tetris\+::\+Group11\+::\+Model\+::\+Piece}}
+\subsubsection{\texorpdfstring{set\+Piece\+Y()}{setPieceY()}}
+{\footnotesize\ttfamily void Project\+Tetris.\+Group11.\+Model.\+Piece.\+set\+PieceY (\begin{DoxyParamCaption}\item[{int}]{pieceY }\end{DoxyParamCaption})}
+
+
+
+This function sets the Y coordinate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pieceY} & new Y coordinate. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/chang/\+Desktop/3\+X\+A3/3\+X\+A3\+\_\+\+Group11/src/\+Project\+Tetris/\+Group11/\+Model/Piece.\+java\end{DoxyCompactItemize}

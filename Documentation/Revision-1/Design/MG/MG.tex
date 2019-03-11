@@ -1,0 +1,242 @@
+\documentclass[12pt, titlepage]{article}
+\usepackage{fullpage}
+\usepackage[round]{natbib}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{hyperref}
+
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=blue
+}
+\usepackage[round]{natbib}
+\newcounter{acnum}
+\newcommand{\actheacnum}{AC\theacnum}
+\newcommand{\acref}[1]{AC\ref{#1}}
+\newcounter{ucnum}
+\newcommand{\uctheucnum}{UC\theucnum}
+\newcommand{\uref}[1]{UC\ref{#1}}
+\newcounter{mnum}
+\newcommand{\mthemnum}{M\themnum}
+\newcommand{\mref}[1]{M\ref{#1}}
+\title{SE 3XA3: Design Document\\PROJECT TETRIS}
+\author{Team \#11, Team Tetra
+		\\ Daniel Agostinho agostd
+		\\ Anthony Chang changa7
+		\\ Divya Sridhar sridhad
+}
+\date{\today}
+
+\begin{document}
+\maketitle
+\pagenumbering{roman}
+\tableofcontents
+\listoftables
+\listoffigures
+\begin{table}[bp]
+\caption{\bf Revision History}
+\begin{tabularx}{\textwidth}{p{3cm}p{2cm}p{4cm}X}
+\toprule {\bf Date} & {\bf Version} & {\bf Developer(s)} & {\bf Notes}\\
+\midrule
+11/02/2016 & 0.0 & Anthony Chang & Initial Draft\\
+11/02/2016 & 0.0 &  Daniel Agostinho & Initial Draft\\
+11/02/2016 & 0.0 & Divya Sridhar & Initial Draft\\
+12/07/2016 & 1.0 & Anthony Chang & Update Module Decomposition\\
+12/07/2016 & 1.0 &  Daniel Agostinho & Final Draft\\
+12/07/2016 & 1.0 & Divya Sridhar & Update Hierarchy and Traceability Matrix\\
+\bottomrule
+\end{tabularx}
+\end{table}
+\newpage
+\pagenumbering{arabic}
+
+\section{Introduction}
+	This is the Module Guide (MG) for PROJECT TETRIS. PROJECT TETRIS is a reimplementation of the classic arcade game Tetris. The user moves pieces called Tetraminos into a game board called a "well" and stacks them. When a row of the well is completely filled, that row is cleared and the user gets points. The purpose of the game is to obtain a high score by clearing as many rows as possible without letting the stack of pieces reach the top. 
+\paragraph{}
+	This project was designed with key programming principles in mind. These principles are: information hiding, modularity, and design for change. We divided the project into modules which are independent sections of code that have their own unique purpose. Modules support good programming principles such as information hiding. The modules abstract their information from other modules such that the other modules need not worry about that information. It does not concern them and allows for the modules to be modified independently and changes can be made without affecting the whole system.
+\paragraph{}
+	The rest of the document is organized as follows. Section
+\ref{SecChange} lists the anticipated and unlikely changes of the software
+requirements. Section \ref{SecMH} summarizes the module decomposition that
+was constructed according to the likely changes. Section \ref{SecConnection}
+specifies the connections between the software requirements and the
+modules. Section \ref{SecMD} gives a detailed description of the
+modules. Section \ref{SecTM} includes two traceability matrices. One checks
+the completeness of the design against the requirements provided in the SRS. The
+other shows the relation between anticipated changes and the modules. Section
+\ref{SecUse} describes the use relation between modules.
+
+
+\section{Anticipated and Unlikely Changes} \label{SecChange}
+This section lists any possible changes to the system. According to the likeliness
+of the change, they are classified into two
+categories: anticipated changes are listed in Section \ref{SecAchange}, and
+unlikely changes are listed in Section \ref{SecUchange}.
+\subsection{Anticipated Changes} \label{SecAchange}
+A design for change paradigm was utilized during our design process for PROJECT TETRIS.
+The following anticipated changes are design choices that are made to elements hidden within 
+modules and thus are easy to alter without affecting other components of the project.
+\begin{description}
+\item[\refstepcounter{acnum} \actheacnum \label{acHardware}:] The specific
+  hardware on which the software is running.
+\item[\refstepcounter{acnum} \actheacnum \label{acOS}:] The specific
+  Operating System on which the software interfaces with.
+\item[\refstepcounter{acnum} \actheacnum \label{acJava}:] The language
+  of Java (future versions/releases).
+\end{description}
+\subsection{Unlikely Changes} \label{SecUchange}
+The following design choices are incorporated in multiple components of the system. If
+a decision should later need to be changed, many different modules will need to be 
+modified. Thus, these design decisions are unlikely to change.
+\begin{description}
+\item[\refstepcounter{ucnum} \uctheucnum \label{ucIO}:] Input/Output devices
+  (Input: Mouse and/or Keyboard, Output: File and/or Screen).
+\item[\refstepcounter{ucnum} \uctheucnum \label{ucAlgorithm}:] The Algorithm
+  for tetromino interaction (setting to well and/or clearing a row).
+\item[\refstepcounter{ucnum} \uctheucnum \label{ucGoal}:] Goal of the software:
+  Playable Tetris game.
+\end{description}
+
+
+\section{Module Hierarchy} \label{SecMH}
+This section provides an overview of the module design. Modules are summarized
+in a hierarchy decomposed by secrets in Table \ref{TblMH}. The modules listed
+below, which are leaves in the hierarchy tree, are the modules that will
+actually be implemented.
+\begin{description}
+\item [\refstepcounter{mnum} \mthemnum \label{mHH}:] Hardware-Hiding Module
+\item [\refstepcounter{mnum} \mthemnum \label{mOM}:] Painter Module
+\item [\refstepcounter{mnum} \mthemnum \label{mIM}:] TetrisController Module
+\item [\refstepcounter{mnum} \mthemnum \label{mGL}:] Piece Module
+\item [\refstepcounter{mnum} \mthemnum \label{mGG}:] Well Module
+\end{description}
+\begin{table}[h!]
+\centering
+\begin{tabular}{p{0.3\textwidth} p{0.6\textwidth}}
+\toprule
+\textbf{Level 1} & \textbf{Level 2}\\
+\midrule
+{Hardware-Hiding Module} & ~ \\
+\midrule
+\multirow{2}{0.3\textwidth}{Behaviour-Hiding Module} & Painter Module\\
+& TetrisController Module\\
+\midrule
+\multirow{2}{0.3\textwidth}{Software Decision Module} &  Piece Module\\
+& Well Module\\
+
+\bottomrule
+\end{tabular}
+\caption{Module Hierarchy}
+\label{TblMH}
+\end{table}
+
+
+\section{Connection Between Requirements and Design} \label{SecConnection}
+The design of the system is intended to satisfy the requirements developed in
+the SRS. In this stage, the system is decomposed into modules. The connection
+between requirements and modules is listed in Table \ref{TblRT}.
+
+
+\section{Module Decomposition} \label{SecMD}
+Modules are decomposed according to the principle of ``information hiding'' while following
+the MVC software design pattern. The \emph{Secrets} field in a module
+decomposition is a brief statement of the design decision hidden by the
+module while the \emph{Services} field specifies \emph{what} the module will do
+without documenting \emph{how} to do it. For each module, a suggestion for the
+implementing software is given under the \emph{Implemented By} title.
+Only the leaf modules in described in the hierarchy will have to be implemented.
+\subsection{Hardware Hiding Modules (\mref{mHH})}
+\begin{description}
+\item[Secrets:]The data structure and algorithm used to implement the virtual
+  hardware.
+\item[Services:]Serves as a virtual hardware used by the rest of the
+  system. This module provides the interface between the hardware and the
+  software so the system can use it to accept inputs and display outputs.
+\item[Implemented By:] OS
+\end{description}
+
+\subsection{Behaviour-Hiding Module}
+\subsubsection{Painter Module (\mref{mOM})}
+\begin{description}
+\item[Secrets:]The format and structure of any output data.
+\item[Services:] Takes the logic of the game and transforms it into graphical pieces. Also converts the graphics created by the application 
+into a viewable and understandable output to the user.
+\item[Implemented By:] PROJECT TETRIS
+\end{description}
+
+\subsubsection{TetrisController Module (\mref{mIM})}
+\begin{description}
+\item[Secrets:] Handles the acception of input and formats/structures the data.
+\item[Services:] Allows the reception of inputs from different sources (i.e. keyboard/mouse). Also converts the input data
+into the data structure used by other modules.
+\item[Implemented By:] PROJECT TETRIS
+\end{description}
+
+\subsection{Software Decision Module}
+\subsubsection{Piece Module  (\mref{mGL})}
+\begin{description}
+\item[Secrets:] Algorithm that controls the behaviour of the tetromino.
+\item[Services:] Details rules on tetromino interaction. This can include
+piece movement, collision, and etc.
+\item[Implemented By:] PROJECT TETRIS
+\end{description}
+
+\subsubsection{Well Module  (\mref{mGG})}
+\begin{description}
+\item[Secrets:] Algorithm that controls the behaviour of the well.
+\item[Services:] Details rules on well interaction. This can include
+well placement, fixing tetrominos to the well, row clearing, and etc.
+\item[Implemented By:] PROJECT TETRIS
+\end{description}
+
+
+\section{Traceability Matrix} \label{SecTM}
+This section shows two traceability matrices: between the modules and the
+requirements and between the modules and the anticipated changes.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{p{0.2\textwidth} p{0.6\textwidth}}
+\toprule
+\textbf{Req.} & \textbf{Modules}\\
+\midrule
+FR1 & \mref{mIM}, \mref{mGG}, \mref{mGL}, \mref{mOM}\\
+FR2 & \mref{mIM}, \mref{mGG}, \mref{mGL}, \mref{mOM}\\
+FR3 & \mref{mIM}, \mref{mGG}, \mref{mGL}, \mref{mOM}\\
+FR4 & \mref{mIM}, \mref{mGG}, \mref{mGL}, \mref{mOM}\\
+FR5 & \mref{mGG}, \mref{mGL}, \mref{mOM}\\
+FR6 & \mref{mGL}\\
+FR7 &  \mref{mGL}, \mref{mOM}\\
+\bottomrule
+\end{tabular}
+\caption{Trace Between Requirements and Modules}
+\label{TblRT}
+\end{table}
+
+
+\newpage
+\section{Use Hierarchy Between Modules} \label{SecUse}
+\begin{table}[h!]
+\centering
+\begin{tabular}{p{0.3\textwidth} p{0.6\textwidth}}
+\toprule
+\textbf{A} & \textbf{Uses B}\\
+\midrule
+{M3} & {M2, M3, M4, M5}\\
+\midrule
+{M2} & {M3}\\
+\midrule
+{M3} & {M4, M5}\\
+\bottomrule
+\end{tabular}
+\caption{Module Hierarchy}
+\label{TblMH}
+\end{table}
+
+\end{document}

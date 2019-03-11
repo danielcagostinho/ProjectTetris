@@ -1,0 +1,99 @@
+\contentsline {section}{\numberline {1}Project Drivers}{1}{section.1}
+\contentsline {subsection}{\numberline {1.1}The Purpose of the Project}{1}{subsection.1.1}
+\contentsline {paragraph}{}{1}{section*.4}
+\contentsline {subsection}{\numberline {1.2}The Stakeholders}{1}{subsection.1.2}
+\contentsline {subsubsection}{\numberline {1.2.1}The Client}{1}{subsubsection.1.2.1}
+\contentsline {paragraph}{}{1}{section*.5}
+\contentsline {subsubsection}{\numberline {1.2.2}The Customers}{1}{subsubsection.1.2.2}
+\contentsline {paragraph}{}{1}{section*.6}
+\contentsline {subsection}{\numberline {1.3}Mandated Constraints}{2}{subsection.1.3}
+\contentsline {subsubsection}{\numberline {1.3.1}Solution Constraints}{2}{subsubsection.1.3.1}
+\contentsline {paragraph}{}{2}{section*.7}
+\contentsline {subsubsection}{\numberline {1.3.2}Partner or Collaborative Applications}{2}{subsubsection.1.3.2}
+\contentsline {subsubsection}{\numberline {1.3.3}Off the shelf}{2}{subsubsection.1.3.3}
+\contentsline {subsubsection}{\numberline {1.3.4}Anticipated Workplace Environment}{3}{subsubsection.1.3.4}
+\contentsline {subsubsection}{\numberline {1.3.5}Schedule Constraints}{3}{subsubsection.1.3.5}
+\contentsline {subsubsection}{\numberline {1.3.6}Budget Constraints}{3}{subsubsection.1.3.6}
+\contentsline {subsubsection}{\numberline {1.3.7}Enterprise Constraints}{3}{subsubsection.1.3.7}
+\contentsline {subsection}{\numberline {1.4}Naming Conventions and Terminology}{3}{subsection.1.4}
+\contentsline {subsection}{\numberline {1.5}Assumptions}{4}{subsection.1.5}
+\contentsline {subsubsection}{\numberline {1.5.1}Business Rules}{4}{subsubsection.1.5.1}
+\contentsline {subsubsection}{\numberline {1.5.2}Assumptions}{4}{subsubsection.1.5.2}
+\contentsline {section}{\numberline {2}Functional Requirements}{4}{section.2}
+\contentsline {subsection}{\numberline {2.1}The Scope of the Work and the Product}{4}{subsection.2.1}
+\contentsline {subsubsection}{\numberline {2.1.1}The Context of the Work}{4}{subsubsection.2.1.1}
+\contentsline {subsubsection}{\numberline {2.1.2}Individual Product Use Cases}{4}{subsubsection.2.1.2}
+\contentsline {paragraph}{Title: Player Moves Left}{4}{section*.8}
+\contentsline {paragraph}{}{4}{section*.9}
+\contentsline {paragraph}{}{4}{section*.10}
+\contentsline {paragraph}{}{4}{section*.11}
+\contentsline {paragraph}{Title: Player Moves Right}{6}{section*.12}
+\contentsline {paragraph}{}{6}{section*.13}
+\contentsline {paragraph}{}{6}{section*.14}
+\contentsline {paragraph}{Title: Player Rotates Tetramino CW}{6}{section*.15}
+\contentsline {paragraph}{}{6}{section*.16}
+\contentsline {paragraph}{}{6}{section*.17}
+\contentsline {paragraph}{}{6}{section*.18}
+\contentsline {paragraph}{Title: Player Rotates Tetramino CCW}{6}{section*.19}
+\contentsline {paragraph}{}{6}{section*.20}
+\contentsline {paragraph}{}{6}{section*.21}
+\contentsline {paragraph}{}{6}{section*.22}
+\contentsline {paragraph}{Title: Player Completes a Row}{6}{section*.23}
+\contentsline {paragraph}{}{6}{section*.24}
+\contentsline {paragraph}{}{6}{section*.25}
+\contentsline {paragraph}{}{6}{section*.26}
+\contentsline {paragraph}{Title: Player Loses Game}{7}{section*.27}
+\contentsline {paragraph}{}{7}{section*.28}
+\contentsline {paragraph}{}{7}{section*.29}
+\contentsline {paragraph}{}{7}{section*.30}
+\contentsline {subsection}{\numberline {2.2}Functional Requirements}{7}{subsection.2.2}
+\contentsline {paragraph}{Requirement 1: FR1}{7}{section*.31}
+\contentsline {subparagraph}{Rationale:}{7}{section*.32}
+\contentsline {paragraph}{Requirement 2: FR2}{7}{section*.33}
+\contentsline {subparagraph}{Rationale:}{7}{section*.34}
+\contentsline {paragraph}{Requirement 3: FR3}{7}{section*.35}
+\contentsline {subparagraph}{Rationale:}{7}{section*.36}
+\contentsline {paragraph}{Requirement 4: FR4}{7}{section*.37}
+\contentsline {subparagraph}{Rationale:}{8}{section*.38}
+\contentsline {paragraph}{Requirement 5: FR5}{8}{section*.39}
+\contentsline {subparagraph}{Rationale:}{8}{section*.40}
+\contentsline {paragraph}{Requirement 6: FR6}{8}{section*.41}
+\contentsline {subparagraph}{Rationale:}{8}{section*.42}
+\contentsline {paragraph}{Requirement 7: FR7}{8}{section*.43}
+\contentsline {subparagraph}{Rationale:}{8}{section*.44}
+\contentsline {section}{\numberline {3}Non-functional Requirements}{8}{section.3}
+\contentsline {subsection}{\numberline {3.1}Look and Feel Requirements}{8}{subsection.3.1}
+\contentsline {paragraph}{Requirement 8: NFR1}{8}{section*.45}
+\contentsline {subparagraph}{Rationale:}{8}{section*.46}
+\contentsline {subsection}{\numberline {3.2}Usability and Humanity Requirements}{9}{subsection.3.2}
+\contentsline {paragraph}{Requirement 9: NFR2}{9}{section*.47}
+\contentsline {subparagraph}{Rationale:}{9}{section*.48}
+\contentsline {subsection}{\numberline {3.3}Performance Requirements}{9}{subsection.3.3}
+\contentsline {paragraph}{Requirement 10: NFR3}{9}{section*.49}
+\contentsline {subparagraph}{Rationale:}{9}{section*.50}
+\contentsline {subsection}{\numberline {3.4}Operational and Environmental Requirements}{9}{subsection.3.4}
+\contentsline {paragraph}{Requirement 11: NFR4}{9}{section*.51}
+\contentsline {subparagraph}{Rationale:}{9}{section*.52}
+\contentsline {subsection}{\numberline {3.5}Maintainability and Support Requirements}{9}{subsection.3.5}
+\contentsline {paragraph}{Requirement 12: NFR5}{9}{section*.53}
+\contentsline {subparagraph}{Rationale:}{9}{section*.54}
+\contentsline {subsection}{\numberline {3.6}Security Requirements}{10}{subsection.3.6}
+\contentsline {subsection}{\numberline {3.7}Cultural Requirements}{10}{subsection.3.7}
+\contentsline {paragraph}{Requirement 13: NFR6}{10}{section*.55}
+\contentsline {subparagraph}{Rationale:}{10}{section*.56}
+\contentsline {subsection}{\numberline {3.8}Legal Requirements}{10}{subsection.3.8}
+\contentsline {paragraph}{Requirement 14: NFR7}{10}{section*.57}
+\contentsline {subparagraph}{Rationale:}{10}{section*.58}
+\contentsline {subsection}{\numberline {3.9}Health and Safety Requirements}{10}{subsection.3.9}
+\contentsline {paragraph}{Requirement 14: NFR7}{10}{section*.59}
+\contentsline {subparagraph}{Rationale:}{10}{section*.60}
+\contentsline {section}{\numberline {4}Project Issues}{10}{section.4}
+\contentsline {subsection}{\numberline {4.1}Open Issues}{10}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Off-the-Shelf Solutions}{11}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}New Problems}{11}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}Tasks}{11}{subsection.4.4}
+\contentsline {subsection}{\numberline {4.5}Migration to the New Product}{11}{subsection.4.5}
+\contentsline {subsection}{\numberline {4.6}Risks}{11}{subsection.4.6}
+\contentsline {subsection}{\numberline {4.7}Costs}{12}{subsection.4.7}
+\contentsline {subsection}{\numberline {4.8}User Documentation and Training}{12}{subsection.4.8}
+\contentsline {section}{\numberline {5}Appendix}{13}{section.5}

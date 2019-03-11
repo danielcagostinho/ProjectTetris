@@ -1,0 +1,162 @@
+\documentclass[12pt, titlepage]{article}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{float}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=blue
+}
+\usepackage[round]{natbib}
+\title{PROJECT TETRIS\\User Guide}
+\author{Team \#11, Team Tetra
+		\\ Daniel Agostinho agostd
+		\\ Anthony Chang changa7
+		\\ Divya Sridhar sridhad
+}
+
+\date{December 07, 2016}
+\begin{document}
+\maketitle
+
+\newpage
+\noindent
+MIT License\\
+\noindent
+\\Copyright (c) 2016 Daniel Agostinho, Anthony Chang, Divya Sridhar\\
+\noindent
+\\Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:\\
+\noindent
+\\The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.\\
+\noindent
+\\THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+\newpage
+
+\pagenumbering{arabic}
+\tableofcontents
+\listoftables
+
+\newpage
+\section{Introduction}
+The purpose of this user guide is to provide an overview of the game installation and setup. The guide is structured as follows:
+\begin{itemize}
+  \item The first part of the guide will deal with system requirements as well as step-by-step installtion instructions (see page ).
+  \item The second part of the guide will serve as an instruction manual for the game. It will outline the controls and basic objective (see page ).
+  \item The third part of the guide provides additional help in the FAQ and troubleshooting sections (see page ).
+\end{itemize}
+
+\subsection{Terminology and Definitions}
+\begin{table}[H]
+\centering
+\begin{tabular}{p{0.2\textwidth} p{0.6\textwidth}}
+\toprule
+\textbf{Term} & \textbf{Definition}\\
+\midrule
+Java & The language used to code this game.\\
+Jar & The executable file used to run and start the game.\\
+Tetrimino & The name of the pieces in the game.\\
+Well & The surrounding walls/boundaries that hold the pieces in.\\
+Level & Progress of the game. A higher level will increase the speed at which the pieces fall.\\
+\bottomrule
+\end{tabular}
+\caption{List of Terminology and Definitions}
+\label{TblD}
+\end{table}
+
+\section{Getting Started}
+
+\subsection{System Requirements}
+PROJECT TETRIS is compatible with the following operating systems:
+\begin{itemize}
+  \item Microsoft Windows
+  \item Mac OS X
+  \item Linux
+\end{itemize}
+
+\noindent
+The following software will be required to run the game:
+\begin{itemize}
+  \item Java
+\end{itemize}
+
+\noindent
+Please refer to the Installation in the following section for further details.
+
+\subsection{Installation}
+
+\begin{enumerate}
+  \item Download and install the latest version of java (https://java.com/en/download/).
+  \item Run ProjectTetris.jar
+\end{enumerate}
+
+\section{Game Basics}
+PROJECT TETRIS is a redevelopment of the classic game Tetris. The objective of the game is the align and set the falling tetrimino pieces to the well.
+Once a row has been completely filled, it will automatically clear and move down any pieces in the rows above.
+
+\subsection{Controls}
+\begin{table}[H]
+\centering
+\begin{tabular}{p{0.3\textwidth} p{0.5\textwidth}}
+\toprule
+\textbf{Key} & \textbf{Function}\\
+\midrule
+LEFT ARROW & Moves the current tetrimino piece to the left 1 space.\\
+RIGHT ARROW & Moves the current tetrimino piece to the right 1 space.\\
+UP ARROW & Rotate the current tetrimino piece clockwise.\\
+DOWN ARROW & Rotate the current tetrimino piece counter-clockwise.\\
+SPACE & Manually drop the current tetrimino piece down 1 space.\\
+P & Pauses the game.\\
+H & Opens the help screen.\\
+\bottomrule
+\end{tabular}
+\caption{Controls}
+\label{TblI}
+\end{table}
+
+\subsection{Scoring}
+\begin{itemize}
+  \item Every row cleared will add 100 points
+  \item Manually dropping the piece 1 space (by pressing SPACE) will add 1 points
+\end{itemize}
+\subsection{Levels}
+At level 1, the game refreshes at a rate of 1000ms. Every 5 pieces dropped, the level will increase which will reduce the refresh rate by 100ms. This is capped at 200ms to preserve a playable speed.
+
+\subsection{Winning the game}
+The game ends once the tetrimino pieces have stacked pass an upper boundary. Until this limit has been reached, the game will continue to run endlessly.
+What's the highest score you can achieve?
+
+\section{FAQ}
+\subsection{Can I save my current progress?}
+No, PROJECT TETRIS is about survival and achieving the highest score. You can temporarily suspend the current play session by pausing, however you will not be able to load any previous progress if you close the game.
+
+\subsection{What happens if a piece completes multiple rows?}
+If a falling tetrimino piece completes multiple rows, all the the mentioned rows will clear and any piece on top will cascade and set to the bottom.
+
+\subsection{I am trying to rotate a piece but it isn't moving.}
+If the new position of a piece after rotation collides with the wall or any other set piece, the command will be rejected. This is to prevent the tetrimino from clipping into each other.
+
+\subsection{Can PROJECT TETRIS be played without an internet connection?}
+Yes! Assuming you have the latest version of Java installed, PROJECT TETRIS does not require an internet connection to play.
+
+\section{Troubleshooting}
+
+\subsection{The jar executable does not run}
+Make sure you have the latest version of Java installed. In addition, make sure your system is running on one of the operating systems listed in the System Requirements section. It may be possible for PROJECT TETRIS to run on other operating systems, however it has only been tested on what is listed.
+
+\end{document}

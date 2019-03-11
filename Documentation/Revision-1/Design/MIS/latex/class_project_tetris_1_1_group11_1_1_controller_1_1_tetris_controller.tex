@@ -1,0 +1,81 @@
+\hypertarget{class_project_tetris_1_1_group11_1_1_controller_1_1_tetris_controller}{}\section{Project\+Tetris.\+Group11.\+Controller.\+Tetris\+Controller Class Reference}
+\label{class_project_tetris_1_1_group11_1_1_controller_1_1_tetris_controller}\index{Project\+Tetris.\+Group11.\+Controller.\+Tetris\+Controller@{Project\+Tetris.\+Group11.\+Controller.\+Tetris\+Controller}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries K\+Listener}
+\begin{DoxyCompactList}\small\item\em This is an inner class defining Key\+Listener that takes the input from view and processes into game commands. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_project_tetris_1_1_group11_1_1_controller_1_1_tetris_controller_a4559dd5c986c8c0a1dc5e4da406196a0}{Tetris\+Controller} ()
+\begin{DoxyCompactList}\small\item\em Constructor for the \hyperlink{class_project_tetris_1_1_group11_1_1_controller_1_1_tetris_controller}{Tetris\+Controller}. \end{DoxyCompactList}\item 
+\hypertarget{class_project_tetris_1_1_group11_1_1_controller_1_1_tetris_controller_aedbc64c85a0081d8ec2921f81ef2eaf6}{}\label{class_project_tetris_1_1_group11_1_1_controller_1_1_tetris_controller_aedbc64c85a0081d8ec2921f81ef2eaf6} 
+void \hyperlink{class_project_tetris_1_1_group11_1_1_controller_1_1_tetris_controller_aedbc64c85a0081d8ec2921f81ef2eaf6}{new\+Game} ()
+\begin{DoxyCompactList}\small\item\em This function starts a new game. It instantiates the well and current piece and contains the game loop. \end{DoxyCompactList}\item 
+\hypertarget{class_project_tetris_1_1_group11_1_1_controller_1_1_tetris_controller_a7735345ddbb540a588bc05c4f4efa3a4}{}\label{class_project_tetris_1_1_group11_1_1_controller_1_1_tetris_controller_a7735345ddbb540a588bc05c4f4efa3a4} 
+void \hyperlink{class_project_tetris_1_1_group11_1_1_controller_1_1_tetris_controller_a7735345ddbb540a588bc05c4f4efa3a4}{set\+Level} ()
+\begin{DoxyCompactList}\small\item\em This function determines the level based on the number of Tetriminos dropped and sets speed accordingly. \end{DoxyCompactList}\item 
+\hypertarget{class_project_tetris_1_1_group11_1_1_controller_1_1_tetris_controller_a0ec05f8de4a6b4cebc8e9a1937be786c}{}\label{class_project_tetris_1_1_group11_1_1_controller_1_1_tetris_controller_a0ec05f8de4a6b4cebc8e9a1937be786c} 
+void \hyperlink{class_project_tetris_1_1_group11_1_1_controller_1_1_tetris_controller_a0ec05f8de4a6b4cebc8e9a1937be786c}{pause} ()
+\begin{DoxyCompactList}\small\item\em This function switches the pause state of the game. \end{DoxyCompactList}\item 
+\hypertarget{class_project_tetris_1_1_group11_1_1_controller_1_1_tetris_controller_afaa1a6dbdbcf65b0333ebd2d8c421caa}{}\label{class_project_tetris_1_1_group11_1_1_controller_1_1_tetris_controller_afaa1a6dbdbcf65b0333ebd2d8c421caa} 
+void \hyperlink{class_project_tetris_1_1_group11_1_1_controller_1_1_tetris_controller_afaa1a6dbdbcf65b0333ebd2d8c421caa}{help} ()
+\begin{DoxyCompactList}\small\item\em This function switches the help state. \end{DoxyCompactList}\item 
+\hypertarget{class_project_tetris_1_1_group11_1_1_controller_1_1_tetris_controller_a17f89bae4791e3eded4de8e4fa356772}{}\label{class_project_tetris_1_1_group11_1_1_controller_1_1_tetris_controller_a17f89bae4791e3eded4de8e4fa356772} 
+void \hyperlink{class_project_tetris_1_1_group11_1_1_controller_1_1_tetris_controller_a17f89bae4791e3eded4de8e4fa356772}{new\+Tetra\+Gen} ()
+\begin{DoxyCompactList}\small\item\em This function generates the new Piece and the next piece to be placed. \end{DoxyCompactList}\item 
+boolean \hyperlink{class_project_tetris_1_1_group11_1_1_controller_1_1_tetris_controller_afabce707cf2676db630a3219e818162b}{move\+Possible} (\hyperlink{class_project_tetris_1_1_group11_1_1_model_1_1_piece}{Piece} piece, \hyperlink{class_project_tetris_1_1_group11_1_1_model_1_1_well}{Well} well, int x, int y, int o)
+\begin{DoxyCompactList}\small\item\em This function checks collision and determines if future piece location will collide with well. \end{DoxyCompactList}\item 
+\hypertarget{class_project_tetris_1_1_group11_1_1_controller_1_1_tetris_controller_a53fd55396019d540acc1d3f6cffd3478}{}\label{class_project_tetris_1_1_group11_1_1_controller_1_1_tetris_controller_a53fd55396019d540acc1d3f6cffd3478} 
+void \hyperlink{class_project_tetris_1_1_group11_1_1_controller_1_1_tetris_controller_a53fd55396019d540acc1d3f6cffd3478}{piece\+Drop} ()
+\begin{DoxyCompactList}\small\item\em This function drops the current piece down 1 space. \end{DoxyCompactList}\item 
+\hypertarget{class_project_tetris_1_1_group11_1_1_controller_1_1_tetris_controller_a3d7ce2d5ac30aef5c409a04dc934d6e0}{}\label{class_project_tetris_1_1_group11_1_1_controller_1_1_tetris_controller_a3d7ce2d5ac30aef5c409a04dc934d6e0} 
+void \hyperlink{class_project_tetris_1_1_group11_1_1_controller_1_1_tetris_controller_a3d7ce2d5ac30aef5c409a04dc934d6e0}{move\+Left} ()
+\begin{DoxyCompactList}\small\item\em This function translates the piece left 1 space. \end{DoxyCompactList}\item 
+\hypertarget{class_project_tetris_1_1_group11_1_1_controller_1_1_tetris_controller_a51d583e56759a19f1fb806f4faa86949}{}\label{class_project_tetris_1_1_group11_1_1_controller_1_1_tetris_controller_a51d583e56759a19f1fb806f4faa86949} 
+void \hyperlink{class_project_tetris_1_1_group11_1_1_controller_1_1_tetris_controller_a51d583e56759a19f1fb806f4faa86949}{move\+Right} ()
+\begin{DoxyCompactList}\small\item\em This function translates the piece right 1 space. \end{DoxyCompactList}\item 
+\hypertarget{class_project_tetris_1_1_group11_1_1_controller_1_1_tetris_controller_a7cdb33ab4ffa50deff495173d99ca8d1}{}\label{class_project_tetris_1_1_group11_1_1_controller_1_1_tetris_controller_a7cdb33ab4ffa50deff495173d99ca8d1} 
+void \hyperlink{class_project_tetris_1_1_group11_1_1_controller_1_1_tetris_controller_a7cdb33ab4ffa50deff495173d99ca8d1}{rotate\+Left} ()
+\begin{DoxyCompactList}\small\item\em This function rotates the current piece C\+CW. \end{DoxyCompactList}\item 
+\hypertarget{class_project_tetris_1_1_group11_1_1_controller_1_1_tetris_controller_a5f6b48a2bbf8b617e801f838d1aa4a48}{}\label{class_project_tetris_1_1_group11_1_1_controller_1_1_tetris_controller_a5f6b48a2bbf8b617e801f838d1aa4a48} 
+void \hyperlink{class_project_tetris_1_1_group11_1_1_controller_1_1_tetris_controller_a5f6b48a2bbf8b617e801f838d1aa4a48}{rotate\+Right} ()
+\begin{DoxyCompactList}\small\item\em This function rotates the current piece CW. \end{DoxyCompactList}\item 
+\hypertarget{class_project_tetris_1_1_group11_1_1_controller_1_1_tetris_controller_a061770a9dd0596e04e14e186cfad2523}{}\label{class_project_tetris_1_1_group11_1_1_controller_1_1_tetris_controller_a061770a9dd0596e04e14e186cfad2523} 
+void \hyperlink{class_project_tetris_1_1_group11_1_1_controller_1_1_tetris_controller_a061770a9dd0596e04e14e186cfad2523}{send\+To\+Painter} ()
+\begin{DoxyCompactList}\small\item\em This function updates the state of the model in the view. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_project_tetris_1_1_group11_1_1_controller_1_1_tetris_controller_a4559dd5c986c8c0a1dc5e4da406196a0}{}\label{class_project_tetris_1_1_group11_1_1_controller_1_1_tetris_controller_a4559dd5c986c8c0a1dc5e4da406196a0} 
+\index{Project\+Tetris\+::\+Group11\+::\+Controller\+::\+Tetris\+Controller@{Project\+Tetris\+::\+Group11\+::\+Controller\+::\+Tetris\+Controller}!Tetris\+Controller@{Tetris\+Controller}}
+\index{Tetris\+Controller@{Tetris\+Controller}!Project\+Tetris\+::\+Group11\+::\+Controller\+::\+Tetris\+Controller@{Project\+Tetris\+::\+Group11\+::\+Controller\+::\+Tetris\+Controller}}
+\subsubsection{\texorpdfstring{Tetris\+Controller()}{TetrisController()}}
+{\footnotesize\ttfamily Project\+Tetris.\+Group11.\+Controller.\+Tetris\+Controller.\+Tetris\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor for the \hyperlink{class_project_tetris_1_1_group11_1_1_controller_1_1_tetris_controller}{Tetris\+Controller}. 
+
+Constructor creates a new painter and adds the K\+Listener. Also starts a new game. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_project_tetris_1_1_group11_1_1_controller_1_1_tetris_controller_afabce707cf2676db630a3219e818162b}{}\label{class_project_tetris_1_1_group11_1_1_controller_1_1_tetris_controller_afabce707cf2676db630a3219e818162b} 
+\index{Project\+Tetris\+::\+Group11\+::\+Controller\+::\+Tetris\+Controller@{Project\+Tetris\+::\+Group11\+::\+Controller\+::\+Tetris\+Controller}!move\+Possible@{move\+Possible}}
+\index{move\+Possible@{move\+Possible}!Project\+Tetris\+::\+Group11\+::\+Controller\+::\+Tetris\+Controller@{Project\+Tetris\+::\+Group11\+::\+Controller\+::\+Tetris\+Controller}}
+\subsubsection{\texorpdfstring{move\+Possible()}{movePossible()}}
+{\footnotesize\ttfamily boolean Project\+Tetris.\+Group11.\+Controller.\+Tetris\+Controller.\+move\+Possible (\begin{DoxyParamCaption}\item[{\hyperlink{class_project_tetris_1_1_group11_1_1_model_1_1_piece}{Piece}}]{piece,  }\item[{\hyperlink{class_project_tetris_1_1_group11_1_1_model_1_1_well}{Well}}]{well,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{o }\end{DoxyParamCaption})}
+
+
+
+This function checks collision and determines if future piece location will collide with well. 
+
+\begin{DoxyReturn}{Returns}
+True if piece can move; False if it collides 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/chang/\+Desktop/3\+X\+A3/3\+X\+A3\+\_\+\+Group11/src/\+Project\+Tetris/\+Group11/\+Controller/Tetris\+Controller.\+java\end{DoxyCompactItemize}

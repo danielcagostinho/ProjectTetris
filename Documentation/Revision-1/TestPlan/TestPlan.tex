@@ -1,0 +1,304 @@
+\documentclass[12pt, titlepage]{article}
+
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=blue
+}
+\usepackage[round]{natbib}
+
+\title{SE 3XA3: Test Plan\\Title of Project}
+
+\author{Team \#, Team Name
+		\\ Student 1 name and macid
+		\\ Student 2 name and macid
+		\\ Student 3 name and macid
+}
+
+\date{\today}
+
+
+
+\begin{document}
+
+\maketitle
+
+\pagenumbering{roman}
+\tableofcontents
+\listoftables
+\listoffigures
+
+\begin{table}[!h]
+\caption{\bf Revision History}
+\begin{tabularx}{\textwidth}{p{3cm}p{2cm}X}
+\toprule {\bf Date} & {\bf Version} & {\bf Notes}\\
+\midrule
+10/21/2016 & Daniel Agostinho & Initial Draft\\
+10/21/2016 & Anthony Chang & Initial Draft\\
+10/21/2016 & Divya Sridhar & Initial Draft\\
+11/13/2016 & Daniel Agostinho & Updated Gantt\\
+12/05/2016 & Divya Sridhar & Updated Test Plan\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\newpage
+
+\pagenumbering{arabic}
+
+
+\section{General Information}
+\subsection{Purpose}
+The purpose of this document is to outline the testing, validation, and verification procedures that were implemented throughout the course of our project, PROJECT TETRIS. The means of testing outlined in this report were used to ensure that the game play process is as smooth as possible, and to ensure that implementation of the game was done successfully. Outlined at the beginning of this document is a list of changes made to this section of project, as this is a revised document based on the final code of PROJECT TETRIS.
+\subsection{Scope}
+The Test Plan is a basis for testing the functionality and successful re-implementation of the classic game Tetris, called PROJECT TETRIS in this case. It has the primary objective of proving that PROJECT TETRIS has met the requirements that have been specified in the requirements document. It must also adhere to the metrics applied to those requirements, so that our success is quantifiable and can be measured.
+
+The testing plan acts as a means to arrange testing activities. This document presents the main aspects of our game that are to be tested. It is also an outline that will be followed of the different testing methods and tools used throughout.
+\subsection{Acronyms, Abbreviations, and Symbols}
+See Table 2.
+\begin{table}[!h]
+\caption{\textbf{Table of Definitions, Abbreviations, and Symbols}} \label{Table}
+\begin{tabularx}{\textwidth}{p{3cm}X}
+\toprule
+\textbf{Abbreviation} & \textbf{Definition} \\
+\midrule
+PoC & Proof of Concept\\
+SRS & Software Requirements Specification\\
+GUI & Graphical User Interface\\
+Functional Test & Input/output black-box test\\
+Unit Test & Small string of tests that examines functions and methods\\
+Stress Test & Testing the limits of the program; this is often done using a large length of time or data\\
+Dynamic Test & Testing that requires the program to be executed\\
+Static Test & Inspection of the code without execution\\
+System Test & Black-box testing of the product examining the products functionality as a whole rather than its internal components\\
+Automated Test & Testing done by using a framework; this project will be utilising JUnit \\
+\bottomrule
+\end{tabularx}
+\end{table}
+\subsection{Overview of Document}
+PROJECT TETRIS is a re-implementation of the classic game Tetris based on an open source code. The software will allow users to play the game on any machine that runs Java. As Tetramino falls and sets on the well, the user is able to change its direction and orientation using the arrow keys. The software's full requirements can be found it the Requirements Document.
+\section{Plan}
+	
+\subsection{Software Description}
+This software is a game that allows the user to play the classic game Tetris. The implementation will be completed in Java, thereby allowing this version of the game to be run offline and on any platform containing a JVM.
+\subsection{Test Team}
+The individuals responsible for testing are Divya Sridhar, Daniel Agostinho, and Anthony Chang.
+\subsection{Automated Testing Approach}
+The primary automated testing tool used was JUnit. Test classes were created for central game logic functions, such as horizontal translation by one unit and vertical translation by one unit. Other functions that required testing include 
+\subsection{Testing Tools}
+\textcolor{red}{Elaborate - CM} \\
+The tool used for this project is JUnit; it will be utilized to automate the unit testing.
+\subsection{Testing Schedule}
+\begin{table}[!htbp]
+\centering
+\caption{\bf Testing Schedule}
+\label{Table}	
+
+\begin{tabular}[pos]{|l|c|r|}
+\hline
+\color{red}\textbf{Task}& \color{red}\textbf{Team Member} & \color{red}\textbf{Date} \\ \hline
+User Input & Anthony Chang, Divya Sridhar, Daniel Agostinho & 10/31/2016\\ \hline
+Game Output &  Daniel Agostinho, Anthony Chang & 11/04/2016\\ \hline
+Usability & Divya Sridhar & 11/08/2016\\ \hline
+Performance & Divya Sridhar, Daniel Agostinho, Anthony Chang & 11/11/2016\\ \hline 
+		
+\end{tabular}
+\end{table}		
+A more detailed Gantt chart can be found \href{run:./Team11_gantt.gan}{here}.
+
+\section{System Test Description}
+\subsection{Tests for Functional Requirements}
+\subsubsection{User Input}
+\paragraph{User Input and Game Output}
+\begin{enumerate}
+\item{KI-1\\}
+Type: Functional, Dynamic, Manual
+					
+Initial State: No keyboard input given
+					
+Input: None
+					
+Output: Tetraminos continue progressing downward until they hit bottom of well
+					
+How test will be performed: The function that waits for a keyboard input in order to modify either the configuration, speed or location of the piece will receive no input, and the view of the game will reflect that the piece stays in the same horizontal position and configuration.
+					
+\item{KI-2\\}
+Type: Functional, Dynamic, Manual
+					
+Initial State: No keyboard input given
+					
+Input: Right arrow pressed
+					
+Output: Tetramino on screen moves one space to the right
+					
+How test will be performed: The function that waits for a keyboard input in order to modify the location of the piece will receive an input, and the view of the game will reflect that the piece has moved one space to the right.
+
+\item{KI-3\\}
+Type: Functional, Dynamic, Manual
+					
+Initial State: No keyboard input given
+					
+Input: Left arrow pressed
+					
+Output: Tetramino on screen moves one space to the left
+					
+How test will be performed: The function that waits for a keyboard input in order to modify the location of the piece will receive an input, and the view of the game will reflect that the piece has moved one space to the left.
+
+\item{KI-4\\}
+Type: Functional, Dynamic, Manual
+					
+Initial State: No keyboard input given
+					
+Input: Spacebar pressed
+					
+Output: Tetramino on screen accelerates downward at a faster rate than 1 space per second
+					
+How test will be performed: The function that waits for a keyboard input in order to modify the location of the piece will receive an input, and the view of the game will reflect that the piece is accelerating downward.
+
+\item{KI-5\\}
+Type: Functional, Dynamic, Manual
+					
+Initial State: No keyboard input given
+					
+Input: Up arrow pressed
+					
+Output: Tetramino on screen rotates clockwise once
+					
+How test will be performed: The function that waits for a keyboard input in order to modify the configuration of the piece will receive an input, and the view of the game will reflect that the piece has rotated once clockwise.
+
+\item{KI-6\\}
+Type: Functional, Dynamic, Manual
+					
+Initial State: No keyboard input given
+					
+Input: Down arrow pressed
+					
+Output: Tetramino on screen rotates counter-clockwise once
+					
+How test will be performed: The function that waits for a keyboard input in order to modify the configuration of the piece will receive an input, and the view of the game will reflect that the piece has rotated once counter-clockwise.
+
+\item{KI-7\\}
+Type: Functional, Dynamic, Manual
+					
+Initial State: No keyboard input given
+					
+Input: Any other key is pressed
+					
+Output: Tetraminoes continue progressing downward until they hit bottom of well
+					
+How test will be performed: The function that waits for a keyboard input in order to modify either the configuration, speed or location of the piece will receive an input that is not valid, and the view of the game will reflect no change in the original horizontal location and configuration of the Tetramino.
+\end{enumerate}
+
+\subsection{Tests for Nonfunctional Requirements}
+\subsubsection{Usability}
+\paragraph{Test for Usability}
+\begin{enumerate}
+\item{U-1\\}
+Type: Structural, Static, Manual
+					
+Initial State: The game has not been compiled or run and the user has the program on their computer.
+					
+Input/Condition: compile and run the program on Mac OS X, Windows, or Linux
+					
+Output/Result: The program should compile and launch PROJECT TETRIS
+					
+How test will be performed: The program will be compiled and launched on each different platform to ensure the usability of the game by anyone who wishes to use it.
+					
+\end{enumerate}
+
+\subsubsection{Performance}
+		
+\paragraph{Test for Performance}
+\begin{enumerate}
+\item{P-1\\}
+Type: Structural, Static, Manual
+					
+Initial State: The game testers will have no previous knowledge of how PROJECT TETRIS works.
+					
+Input/Condition: Users will play PROJECT TETRIS for 2 minutes					
+Output/Result: The amount of rows cleared in 2 minutes is a minimum of 4
+					
+How test will be performed: The program will be tested by people who have never played PROJECT TETRIS. If they are able to play such that they are able to clear at least 4 rows in under 2 minutes, it proves that the game is easily enough to understand without prior explanation or use of instructions.
+					
+\end{enumerate}
+\section{Tests for Proof of Concept}
+The Proof of Concept testing is focused mainly on the game logic working and getting the keyboard input to work. There is no view aspect to the game and the only way to verify that the program is functioning is through the console. The tests used for the Proof of Concept are similar to the tests for the Key Input tests.
+\subsection{Game Logic and Controller}
+
+\begin{enumerate}
+\item{POC-1\\}
+Type: Functional, Dynamic, Manual
+					
+Initial State: No keyboard input given
+					
+Input: None
+					
+Output: The console will output that the Tetramino is moving downward.
+					
+How test will be performed: The function that waits for a keyboard input in order to modify either the configuration, speed or location of the piece will receive no input, and the console will display that the Tetramino is only moving downward.
+					
+\item{POC-2\\}
+Type: Functional, Dynamic, Manual
+					
+Initial State: No keyboard input given
+					
+Input: Right arrow pressed
+					
+Output: Console outputs that the Tetramino moves one space to the right.
+					
+How test will be performed: The function that waits for a keyboard input in order to modify the location of the piece will receive an input, and the console will display that the Tetramino has moved one space to the right.
+
+\item{POC-3\\}
+Type: Functional, Dynamic, Manual
+					
+Initial State: No keyboard input given
+					
+Input: Left arrow pressed
+					
+Output: Tetramino on screen moves one space to the left
+					
+How test will be performed: The function that waits for a keyboard input in order to modify the location of the piece will receive an input, and the console will display that the Tetramino has moved one space to the left.
+
+\item{POC-4\\}
+Type: Functional, Dynamic, Manual
+					
+Initial State: No keyboard input given
+					
+Input: Up arrow pressed
+					
+Output: Tetramino on screen rotates clockwise once
+					
+How test will be performed: The function that waits for a keyboard input in order to modify the configuration of the piece will receive an input, and the console will display that the Tetramino has rotated once clockwise.
+
+\item{POC-5\\}
+Type: Functional, Dynamic, Manual
+					
+Initial State: No keyboard input given
+					
+Input: Down arrow pressed
+					
+Output: Tetramino on screen rotates counter-clockwise once
+					
+How test will be performed: The function that waits for a keyboard input in order to modify the configuration of the piece will receive an input, and the console will display that the Tetramino has rotated once counter-clockwise.
+					
+\end{enumerate}
+
+\section{Unit Testing Plan}
+For unit testing of this project, Team TETRIS will use JUnit.
+
+\subsection{Unit testing of internal functions}
+Certain functions within our program receive input and return output. There is a certain behaviour that we wish those functions to follow. For a given input there, there is a corresponding expected output. We can unit test the internal functions by giving these functions inputs that will throws exceptions (as expected) and inputs that will yield expected results. No stubs or drivers will be needed for testing. Our goal is to cover at least 75\%  of our code to ensure that most types of functions are tested.        		
+\subsection{Unit testing of output files}	
+Since the output of the game is a view of the current state of the game, it is an integration of all the parts of the program working together. The only way to unit test the output is to give the internal functions an input and compare the output to how we expect the output to behave. For example if we give as input Tetramino move right, we can test that it works by checking if the output has the Tetramino moving one space to the right. Another example is if the Tetramino is at the right edge of the screen and we give it the input to move right again. We can verify that the program works if the output shows that the Tetramino does not move right and conforms to the physical laws of the game.       	\newpage
+\subsection{Usability Survey Questions?}
+
+Have you played the original Tetris game?
+How does this version compare to the original?
+Does it look and feel like the original Tetris?
+Was it difficult to learn how to play and understand the rules?
+\end{document}
